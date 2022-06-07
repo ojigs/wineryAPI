@@ -202,12 +202,16 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
+app.get('/api/wines', (request, response) => {
+    response.json(wines)
+})
+
 app.get('/api/wines/:name', (request, response) => {
     const wine = request.params.name.toLowerCase()
     if (wines[wine]) {
         response.json(wines[wine])
     } else {
-        response.send('Oops, wine not available. Check back later!')
+        response.json({'error': 'Oops, wine not available. Check back later!'})
     }
 })
 
