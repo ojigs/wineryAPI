@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Winery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato&family=Nunito+Sans&family=Poppins&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Winery</h1>
-    <p>We offer you a list of the available best wines in town</p>
-    <p>To access our wine collection, append /api/wines/&lt;wine-name&gt; to the url, where &lt;wine-name&gt; is the name of your choice wine. Example /api/wines/summer water rose</p>
+    <section class="main">
+        <div>
+            <p class="vibes">Welcome to Winery</p>
+            <h1>Best of Wine APIs</h1>
+            <p>We offer you some of the best available wines in town</p>
+            <p>To access our wine collection, append <span class="red">/api/wines/&lt;wine-name&gt;</span> at the end of the url, where <span class="red">&lt;wine-name&gt;</span> is the name of your choice wine. Example: <a href="https://stellar-winery-api.herokuapp.com/api/wines/summer water rose">stellar-winery-api.herokuapp.com/api/wines/summer water rose</a></p>
+            <button id="nextSlide">MORE</button>
+        </div>
+    </section>
+
+    <section class="supplement hidden">
+        <div>
+            <h2>Winery.</h2>
+            <button><a href="https://stellar-winery-api.herokuapp.com/api/wines/">See all collections</a></button>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
 </body>
 </html>
